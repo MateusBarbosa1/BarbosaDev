@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 * {
   margin: 0;
@@ -7,6 +8,8 @@
 }
 body {
   height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
 }
 header {
   display: flex;
@@ -36,10 +39,10 @@ header .menu {
   color: rgb(185, 210, 255);
   transition: 0.5s;
 }
-section .slogan {
+.info .slogan {
   width: 100%;
 }
-section .slogan h2 {
+.info .slogan h2 {
   padding: 80px 0 30px 0;
   font-size: 50px;
   font-family: "Oswald", sans-serif;
@@ -62,15 +65,151 @@ section .slogan h2 {
   border: none;
   border-radius: 30px;
 }
-section img {
+.info img {
   max-width: 60%;
   height: auto;
 }
+.section {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
 
+.section-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  margin: 6% 0;
+  text-align: center;
+}
+
+.section-div-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3 - 60px);
+  margin: 30px 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 20px 0px #d6edf8;
+  border-radius: 15px;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+.section-div-card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.section-div-card img {
+  width: 100%;
+  height: auto;
+}
+
+.section-div-card h3 {
+  margin-bottom: 0px;
+  font-weight: 600;
+  color: #2e4371;
+}
+.section-div-card p {
+  margin: 15px;
+}
+
+.services {
+  margin: 5%;
+}
+.service-single {
+  flex-wrap: nowrap;
+  display: flex;
+}
+.service-text {
+  width: 50%;
+  margin: 9.5% 4%;
+}
+.service-text h2 {
+  font-size: 40px;
+  padding-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #2e4371;
+}
+.service-text p {
+  font-size: 19px;
+}
+.service-image {
+  width: 50%;
+}
+.service-image img {
+  width: 550px;
+  height: auto;
+}
+.budget {
+  text-align: center;
+  color: white;
+  width: 100%;
+  background: #1565c0;
+}
+.budget h2 {
+  padding-top: 5%;
+  font-size: 48px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.budget p {
+  padding-top: 2%;
+  font-size: 20px;
+}
+.budget button {
+  cursor: pointer;
+  margin: 2% 0 3% 0;
+  background-color: white;
+  color: black;
+  padding: 12px 60px;
+  font-size: 17px;
+  border: none;
+  border-radius: 30px;
+}
+footer {
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 6px;
+  font-style: italic;
+  background: #141c2d;
+}
 /* RESPONSIVE */
+
 @media screen and (max-width: 1140px) {
   header .menu {
     margin-left: 25%;
+  }
+  .service-image {
+    width: 50%;
+  }
+  .service-image img {
+    width: 450px;
+    height: auto;
+  }
+  .service-text {
+    width: 50%;
+    margin: 9.5% 4%;
+  }
+  .service-text h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #2e4371;
+  }
+  .service-text p {
+    font-size: 16px;
   }
 }
 
@@ -78,24 +217,106 @@ section img {
   header .menu {
     margin-left: 20%;
   }
+  .budget h2 {
+    font-size: 40px;
+  }
+  .budget p {
+    font-size: 17px;
+  }
+  .budget button {
+    padding: 12px 60px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 900px) {
   header .menu {
     display: none;
   }
-  section .slogan h2 {
+  .info .slogan h2 {
     font-size: 40px;
   }
   .slogan p {
     width: 90%;
+  }
+  .service-image {
+    width: 50%;
+  }
+  .service-image img {
+    width: 350px;
+    height: auto;
+  }
+  .service-text {
+    width: 50%;
+    margin: 7% 4%;
+  }
+  .service-text h2 {
+    font-size: 24px;
+    padding-bottom: 20px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #2e4371;
+  }
+  .service-text p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .section-div-card {
+    width: 100%;
+  }
+  .service-single {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .service-image {
+    width: 100%;
+  }
+  .service-image img {
+    width: 390px;
+    margin-left: 18%;
+    height: auto;
+  }
+  .service-text {
+    width: 90%;
+    margin: 7% 0;
+  }
+  .service-text h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #2e4371;
+  }
+  .service-text p {
+    font-size: 15px;
+  }
+  .budget {
+    padding: 0 10%;
+  }
+  .budget h2 {
+    font-size: 30px;
+  }
+  .budget p {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
+  .budget button {
+    padding: 12px 60px;
+    font-size: 14px;
+    margin-bottom: 7%;
   }
 }
 @media screen and (max-width: 500px) {
   header .menu {
     display: none;
   }
-  section .slogan h2 {
+  .info .slogan h2 {
     width: 90%;
     font-size: 40px;
   }
@@ -111,5 +332,39 @@ section img {
     font-size: 15px;
     border: none;
     border-radius: 30px;
+  }
+  .service-single {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .service-image {
+    width: 100%;
+  }
+  .service-image img {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+  .service-text {
+    width: 90%;
+    margin: 7% 0;
+  }
+  .service-text h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #2e4371;
+  }
+  .service-text p {
+    font-size: 15px;
+  }
+  .budget {
+    padding: 5% 10%;
+  }
+  .budget h2 {
+    font-size: 30px;
   }
 }
