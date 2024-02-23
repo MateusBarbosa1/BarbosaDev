@@ -182,6 +182,104 @@ footer {
   font-style: italic;
   background: #141c2d;
 }
+
+.service-text button {
+  cursor: pointer;
+  margin: 30px 0;
+  background-color: #1976d2;
+  color: white;
+  padding: 15px 40px;
+  font-size: 17px;
+  border: none;
+  border-radius: 30px;
+}
+
+.contact-main {
+  background: #f4f7f9;
+  display: flex;
+  padding: 5%;
+}
+.contact-main h2 {
+  padding-left: 4%;
+  width: 50%;
+  font-size: 57px;
+  padding-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #2e4371;
+}
+.contact-main p {
+  width: 50%;
+  margin-top: 4%;
+  font-size: 20px;
+  color: #1976d2;
+}
+.contact {
+  display: flex;
+  color: #2e4371;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.contact .contact-info {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact .contact-info h2 {
+  font-size: 30px;
+  padding: 40px 0 20px 0;
+  text-align: center;
+  width: 100%;
+}
+.contact-info a {
+  color: #2e4371;
+  padding-left: 10px;
+}
+.contact-info > div > div {
+  padding: 5px 0;
+}
+.contact .send-message {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.send-message h2 {
+  color: #2e4371;
+  font-size: 30px;
+  padding: 40px 0 20px 0;
+  text-align: center;
+  width: 100%;
+}
+.send-message input[type="text"] {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  padding: 0 5px;
+}
+.send-message input[type="email"] {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  padding: 0 5px;
+}
+textarea {
+  width: 100%;
+  outline: none;
+  height: 70%;
+  padding: 10px;
+  resize: none;
+}
+.send-message input[type="submit"] {
+  margin: 16px 0;
+  border: none;
+  background: #1976d2;
+  color: white;
+  padding: 10px 25px;
+}
 /* RESPONSIVE */
 
 @media screen and (max-width: 1140px) {
@@ -226,6 +324,12 @@ footer {
   .budget button {
     padding: 12px 60px;
     font-size: 14px;
+  }
+  .contact-main h2 {
+    font-size: 45px;
+  }
+  .contact-main p {
+    font-size: 17px;
   }
 }
 
@@ -311,6 +415,28 @@ footer {
     font-size: 14px;
     margin-bottom: 7%;
   }
+  .contact-main {
+    flex-wrap: wrap;
+  }
+  .contact-main h2 {
+    text-align: center;
+    width: 100%;
+  }
+  .contact-main p {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact {
+    flex-wrap: wrap;
+  }
+  .contact .contact-info {
+    width: 100%;
+  }
+  .contact .send-message {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 500px) {
   header .menu {
@@ -366,5 +492,11 @@ footer {
   }
   .budget h2 {
     font-size: 30px;
+  }
+  .contact-main h2 {
+    font-size: 36px;
+  }
+  .contact-main p {
+    font-size: 15px;
   }
 }
