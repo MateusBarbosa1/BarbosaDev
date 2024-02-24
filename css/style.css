@@ -19,25 +19,120 @@ header {
   padding: 20px;
   border-bottom: 2px solid rgb(201, 201, 201);
 }
+nav a {
+  color: gray;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  margin: 0px 35%;
+  height: 8vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin-top: 50px;
+  letter-spacing: 3px;
+  margin-left: 40px;
+}
+
+.mobile-menu {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  left: 80%;
+  top: 7.5%;
+  z-index: 1;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: black;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  .icons {
+    display: none;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    display: none;
+    z-index: 0;
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: white;
+    color: black;
+    border: 1px solid gray;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    margin-right: 15px;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+  display: flex;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
 header .logo {
   margin: 0 4%;
 }
 header .logo img {
   width: 180px;
-}
-header .menu {
-  margin-left: 35%;
-  margin-top: 30px;
-}
-.menu-item {
-  padding: 0 20px;
-  font-size: 18px;
-  color: gray;
-  text-decoration: none;
-}
-.menu-item:hover {
-  color: rgb(185, 210, 255);
-  transition: 0.5s;
 }
 .info .slogan {
   width: 100%;
@@ -283,9 +378,6 @@ textarea {
 /* RESPONSIVE */
 
 @media screen and (max-width: 1140px) {
-  header .menu {
-    margin-left: 25%;
-  }
   .service-image {
     width: 50%;
   }
@@ -312,9 +404,6 @@ textarea {
 }
 
 @media screen and (max-width: 980px) {
-  header .menu {
-    margin-left: 20%;
-  }
   .budget h2 {
     font-size: 40px;
   }
@@ -334,9 +423,6 @@ textarea {
 }
 
 @media screen and (max-width: 900px) {
-  header .menu {
-    display: none;
-  }
   .info .slogan h2 {
     font-size: 40px;
   }
@@ -439,9 +525,6 @@ textarea {
   }
 }
 @media screen and (max-width: 500px) {
-  header .menu {
-    display: none;
-  }
   .info .slogan h2 {
     width: 90%;
     font-size: 40px;

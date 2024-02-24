@@ -23,16 +23,21 @@
         <img src="images/Barbosa Dev - LOGO TRANSPARENTE.png" />
       </div>
       <!--menu-->
-      <nav class="menu">
-        <ul>
-          <a class="menu-item" style="font-weight: bold; color: #1976d2" href=""
-            >Inicio</a
-          >
-          <a class="menu-item" href="/services.html">Serviços</a>
-          <a class="menu-item" href="">Blog</a>
-          <a class="menu-item" href="/contact.html">Contato</a>
+      <nav>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="/" style="font-weight: bold; color: #1976d2">Início</a>
+          </li>
+          <li><a href="/services.html">Serviços</a></li>
+          <li><a href="/contact.html">Contato</a></li>
         </ul>
       </nav>
+
       <!--menu-->
     </header>
     <section class="info">
@@ -46,7 +51,9 @@
             <span style="font-weight: bold">Melhores</span> tecnologias da
             atualidade!
           </p>
-          <button>Contacte-nos</button>
+          <button onclick="window.location.href = '/contact.html';">
+            Contacte-nos
+          </button>
         </center>
       </div>
       <!--slogan-->
@@ -146,5 +153,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="js/mobile.menu.js"></script>
   </body>
 </html>
