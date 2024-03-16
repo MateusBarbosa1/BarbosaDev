@@ -50,7 +50,6 @@ app.post("/contact", (req, res) => {
   transporter.sendMail(messageData, (error, info) => {
     if (error) {
       res.redirect("/contact");
-
       console.log(error);
     } else {
       res.redirect("/contact");
